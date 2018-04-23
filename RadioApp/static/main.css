@@ -1,0 +1,161 @@
+*{
+	//border: 1px solid white;
+}
+
+body {
+
+	font-family: century gothic;
+	background-color: rgba(0,0,0,0.9);
+}
+
+main {
+
+	display: flex;
+  	flex-flow: row wrap;
+  	justify-content: center;
+}
+
+.title {
+
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-style: italic;
+	font-size: 2.5em;
+}
+
+.title span {
+
+	color: coral;
+
+}
+
+.numbers {
+
+	display: flex;
+  	flex-flow: column wrap;
+  	justify-content: flex-start;
+
+	color: white;
+	font-weight: bold;
+	margin-right: 5px;
+
+}
+
+.numbers span {
+		
+	font-size: 2em;
+	margin: 10px;
+}
+
+.main {
+
+	display: flex;
+  	flex-flow: column wrap;
+  	justify-content: flex-start;
+
+	color: white;
+	
+
+
+}
+
+.main .item {
+
+	display: flex;
+	flex-flow: row wrap;
+  	justify-content: center;
+  	align-items: center;
+
+  	margin: 5px 0;
+
+}
+
+.main .item .SongName {
+
+	width: 250px;
+	margin: 0 20px;
+	font-size: 1.2em;
+
+}
+
+.main .item .deleteItem {
+
+	padding: 10px 15px;
+	font-size: .7em;
+	font-weight: bold;
+	color: rgba(255,255,255,.5);
+	border-radius: 100px;
+	background-color: rgba(255,255,255,.1);
+	cursor: pointer;
+
+}
+
+.main .item .deleteItem:hover {
+
+	background-color: rgba(255,255,255,.5);
+	color: rgba(255,255,255,1);
+	transition: all .25s ease-in-out;
+
+}
+
+.main img {
+
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	object-fit: cover;
+
+}
+
+.form{
+
+	display: flex;
+  	flex-flow: row wrap;
+  	justify-content: center;
+  	align-items: center;
+
+  	color: rgba(255,255,255,.5);
+  	font-size: 0.9em;
+
+  	margin: 50px;
+} 
+
+.form span, .form input{
+
+	margin: 0 10px;
+} 
+
+.form input[type=text]{
+
+	background-color: transparent;
+	color: white;
+	padding: 7px 25px;
+	font-family: century gothic;
+	border-radius: 5px;
+	border: 1px solid rgba(255,255,255,.7);
+} 
+
+.form input[type=submit]{
+
+	background-color: coral;
+	color: white;
+	padding: 7px 25px;
+	font-family: century gothic;
+	border-radius: 5px;
+	border: 1px solid rgba(255,255,255,.7);
+	cursor: pointer;
+} 
+
+.form input[type=submit]:hover {
+
+	border: 1px solid rgba(255,255,255,1);
+	transform: scale(1.1,1.1);
+	transition: all .1s ease-in-out;
+} 
+
+.form input[type=submit]:active {
+
+	transform: scale(0.95,0.95);
+	transition: all .1s ease-in-out;
+} 

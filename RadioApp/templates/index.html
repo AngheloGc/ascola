@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="$1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cola de Videos Anime Sama</title>
+        <link rel="stylesheet" href="{% static 'main.css' %}">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+        <p class="title">COLA DE VIDEOS <span>ANIME SAMA</span></p>
+        <main>
+            <div class="numbers">
+            <span>1ro</span>
+            <span>2do</span>
+            <span>3ro</span>
+        </div>
+        <div class="main" id="main">
+
+            {% if latest_pedido_list %}
+            {% for pedido in latest_pedido_list %}
+            <div class="item">
+                <img src="{{ pedido.imageURL }}">
+                <p class="SongName">{{ pedido.name }}</p>
+                <span onclick="DeleteItem(this)" class="deleteItem">X</span>
+            </div>
+            {% endfor %}
+            {% else %}
+                <p class="SongName">No hay pedidos</p>
+            {% endif %}
+        </div>
+        </main>
+        <div class="form">
+            <form id="form" action="/add/" method="post">{% csrf_token %}
+                <label for="url">URL Image:</label>
+                <input id="url" type="text" name="">
+                <label for="songName">Song Name:</label>
+                <input id="songName" type="text" name="">
+                <input type="submit" name="submit" value="Agregar">    
+            </form>       
+        </div>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <!--<script type="text/javascript" src="{% static 'lista.json' %}"></script>-->
+        <script src="{% static 'main.js' %}"></script>
+    </body>
+</html>

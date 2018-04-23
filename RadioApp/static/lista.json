@@ -1,0 +1,24 @@
+lista = {
+  "items": [
+    {
+    "song": "Koi to Uso",
+    "url": "https://media.shoanime.com/2017/11/Koi-to-Uso-portada.jpg"
+  },
+  {
+    "song": "Tokyo Ghoul:re",
+    "url": "https://i2.wp.com/freakelitex.com/wp-content/uploads/2017/12/Tokyo-Ghoulre-1.jpg?fit=1200%2C850"
+  },
+  {
+    "song": "Nanatsu no Taizai 2nd Season",
+    "url": "https://4.bp.blogspot.com/-S9aHt6q_gYQ/Wm4PypSJZgI/AAAAAAAABFU/SN3CQHCC_dEz9hSmg7nR_G4YtNXUPDZcgCLcBGAs/s1600/1280x720-IEO.jpg"
+  },
+  {
+    "song": "Inuyashiki",
+    "url": "https://i-cdn.animesync.tv/255x327/100/r/www.animesync.tv/uploads/82586af329060e5f4d035b58a1b19317-204.jpg"
+  },
+  {
+    "song": "Made in Abyss",
+    "url": "https://f01.mrcdn.info/file/mrportal/h/b/d/4/OZ.58Qm1dnQ.png"
+  },
+  ]
+}
