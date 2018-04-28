@@ -1,17 +1,27 @@
 $(document).on('submit','#form', function(e){
 	e.preventDefault();
 
+	let name = document.getElementById("songName").value;
+		url = document.getElementById("url").value;
+
 	$.ajax({
 		type: 'POST',
 		url: '/add/',
 		data: {
-			name: document.getElementById("songName").value,
-			url: document.getElementById("url").value,
+			name: name,
+			url: url,
 			csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
 		},
 		success: function(){
 
-			console.log('Item Agregado');
+			let item = document.createElement("div");
+
+			item.className = 'item';
+
+			item.innerHTML =
+				"<img src="+url+"><p class='SongName'>"+name+"</p><span onclick='DeleteItem(this)' class='deleteItem'>X</span>";
+
+			document.getElementById('main').appendChild(item);
 		}
 	});
 })
@@ -48,7 +58,21 @@ $(document).on('submit','#form', function(e){
 }*/
 
 function DeleteItem(e) {
+	
+	$.ajax({
+		type: 'POST',
+		url: '/delete/',
+		data: {
+			id: e.parentNode.id,
+			csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+		},
+		success: function(){
+
+			console.log('Item Eliminado');
+		}
+	});
+
 	e.parentNode.id= 'remove'
     var item = document.getElementById('remove');
-    item.parentNode.removeChild(item);
+	item.parentNode.removeChild(item);
 }

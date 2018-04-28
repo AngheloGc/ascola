@@ -20,7 +20,7 @@ from RadioApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', views.index, name='index'),
+    path('', views.index, name='index'),
     path('add/', views.get_pedido, name='addPedido'),
     path('delete/', views.delete_pedido, name='deletePedido'),
 ]

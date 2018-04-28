@@ -10,7 +10,7 @@ from RadioApp.forms import addPedido
 
 
 def index(request):
-    latest_pedido_list = Pedido.objects.order_by('-fecha')[:20]
+    latest_pedido_list = Pedido.objects.order_by('fecha')[:20]
     template = loader.get_template('index.html')
     context = {
         'latest_pedido_list': latest_pedido_list,

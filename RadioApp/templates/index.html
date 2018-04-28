@@ -21,7 +21,7 @@
 
             {% if latest_pedido_list %}
             {% for pedido in latest_pedido_list %}
-            <div class="item">
+            <div id="{{ pedido.id }}" class="item">
                 <img src="{{ pedido.imageURL }}">
                 <p class="SongName">{{ pedido.name }}</p>
                 <span onclick="DeleteItem(this)" class="deleteItem">X</span>
