@@ -24,7 +24,9 @@
             <div id="{{ pedido.id }}" class="item">
                 <img src="{{ pedido.imageURL }}">
                 <p class="SongName">{{ pedido.name }}</p>
+                {% if user.is_superuser %}
                 <span onclick="DeleteItem(this)" class="deleteItem">X</span>
+                {% endif %}
             </div>
             {% endfor %}
             {% else %}
@@ -32,6 +34,7 @@
             {% endif %}
         </div>
         </main>
+        {% if user.is_superuser %}
         <div class="form">
             <form id="form" action="/add/" method="post">{% csrf_token %}
                 <label for="url">URL Image:</label>
@@ -41,6 +44,7 @@
                 <input type="submit" name="submit" value="Agregar">    
             </form>       
         </div>
+        {% endif %}
         <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
         <!--<script type="text/javascript" src="{% static 'lista.json' %}"></script>-->
         <script src="{% static 'main.js' %}"></script>
